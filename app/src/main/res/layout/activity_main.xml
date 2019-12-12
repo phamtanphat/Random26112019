@@ -1,12 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#891def"
+    android:orientation="vertical"
     android:id="@+id/relativeLayout"
     tools:context=".MainActivity">
 
-</RelativeLayout>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textAllCaps="true"
+        android:textColor="#f20"
+        android:text="Ứng dụng random"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/edtMin"
+        android:maxLength="3"
+        android:inputType="number"
+        android:hint="Nhập số min"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/edtMax"
+        android:maxLength="3"
+        android:inputType="number"
+        android:hint="Nhập số max"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

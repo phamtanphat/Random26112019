@@ -10,7 +10,6 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    RelativeLayout relativeLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 //        Random random = new Random();
 //        int numberRandom = random.nextInt(303 - 5 + 1) + 5;
 //        Log.d("BBB",String.valueOf(numberRandom));
-        relativeLayout = findViewById(R.id.relativeLayout);
+
 //        Random random = new Random();
 //        int red = random.nextInt(256);
 //        int green = random.nextInt(256);
