@@ -2,7 +2,10 @@ package com.example.random26112019;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,10 +13,14 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    EditText mEdtMin,mEdtMax;
+    Button mBtnRandom;
+    TextView mTvResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //ctrl + .
 //        0.1 * 5 = 0.5
 //        0.2 * 5= 1
 //        0.9 * 5 = 4.5
@@ -42,6 +49,13 @@ public class MainActivity extends AppCompatActivity {
 //        int blue = random.nextInt(256);
         //123456789abcdef => 6 gia tri
 //        relativeLayout.setBackgroundColor(Color.rgb(red,green,blue));
+        mEdtMin = findViewById(R.id.edtMin);
+        mEdtMax = findViewById(R.id.edtMax);
+        mBtnRandom = findViewById(R.id.btnRandom);
+        mTvResult = findViewById(R.id.txtResult);
 
+        // Task 1 : Lấy dữ liệu trong edittext
+        // Task2 : Xem sự kiện click của button
+        // Task 3 : Khi Click button show ra dữ trong edittext
     }
 }
