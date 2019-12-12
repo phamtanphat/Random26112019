@@ -30,6 +30,10 @@ public class MainActivity extends AppCompatActivity {
 //        int b = 10;
 //        int ketqua = Math.max(a , b);
 //        Log.d("BBB",String.valueOf(ketqua));
+//      5 - 10
         Random random = new Random();
+        int numberRandom = random.nextInt();
+        Log.d("BBB",String.valueOf(numberRandom));
+
     }
 }
