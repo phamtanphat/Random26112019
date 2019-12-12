@@ -1,15 +1,16 @@
 package com.example.random26112019;
 
+import android.graphics.Color;
+import android.os.Bundle;
+import android.widget.RelativeLayout;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-import android.util.Log;
-
-import java.util.Map;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    RelativeLayout relativeLayout;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,10 +31,18 @@ public class MainActivity extends AppCompatActivity {
 //        int b = 10;
 //        int ketqua = Math.max(a , b);
 //        Log.d("BBB",String.valueOf(ketqua));
-//      5 - 10
-        Random random = new Random();
-        int numberRandom = random.nextInt();
-        Log.d("BBB",String.valueOf(numberRandom));
+//      5 - 303
+//
+//        Random random = new Random();
+//        int numberRandom = random.nextInt(303 - 5 + 1) + 5;
+//        Log.d("BBB",String.valueOf(numberRandom));
+        relativeLayout = findViewById(R.id.relativeLayout);
+//        Random random = new Random();
+//        int red = random.nextInt(256);
+//        int green = random.nextInt(256);
+//        int blue = random.nextInt(256);
+        //123456789abcdef => 6 gia tri
+//        relativeLayout.setBackgroundColor(Color.rgb(red,green,blue));
 
     }
 }
