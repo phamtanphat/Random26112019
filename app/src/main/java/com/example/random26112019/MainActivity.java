@@ -2,6 +2,8 @@ package com.example.random26112019;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
@@ -13,9 +15,10 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText mEdtMin,mEdtMax;
+    EditText mEdtMin, mEdtMax;
     Button mBtnRandom;
     TextView mTvResult;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,7 +58,24 @@ public class MainActivity extends AppCompatActivity {
         mTvResult = findViewById(R.id.txtResult);
 
         // Task 1 : Lấy dữ liệu trong edittext
-        // Task2 : Xem sự kiện click của button
+        // Task 2 : Xem sự kiện click của button
         // Task 3 : Khi Click button show ra dữ trong edittext
+
+        mBtnRandom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String textMin = mEdtMin.getText().toString().trim();
+                String textMax = mEdtMax.getText().toString().trim();
+
+                Integer sMin = Integer.valueOf(textMin);
+                Integer sMax = Integer.valueOf(textMax);
+
+                Random random = new Random();
+                int value = random.nextInt(sMax - sMin + 1) + sMin;
+
+                mTvResult.setText(String.valueOf(value));
+            }
+        });
+
     }
 }
