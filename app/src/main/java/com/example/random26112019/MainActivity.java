@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -64,9 +65,15 @@ public class MainActivity extends AppCompatActivity {
         mBtnRandom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String textMin = mEdtMin.getText().toString().trim();
                 String textMax = mEdtMax.getText().toString().trim();
 
+
+                if (textMin.isEmpty() | textMax.isEmpty()){
+                    Toast.makeText(MainActivity.this, "Ban hay du thong tin!!", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Integer sMin = Integer.valueOf(textMin);
                 Integer sMax = Integer.valueOf(textMax);
 
